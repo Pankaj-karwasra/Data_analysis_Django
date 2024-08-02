@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Analysis Results</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="analysis/static/style.css">
+</head>
+<body>
+    <div id="main-content">
+        <h1 id="results-header">Data Analysis Results</h1>
+        
+        <div id="results-section">
+            <h2>First Few Rows</h2>
+            <div id="data-head">{{ data_head|safe }}</div>
+        </div>
+        
+        <div id="results-section">
+            <h2>Summary Statistics</h2>
+            <div id="summary-stats">{{ summary_stats|safe }}</div>
+        </div>
+        
+        <div id="results-section">
+            <h2>Missing Values</h2>
+            <div id="missing-values">{{ missing_values|safe }}</div>
+        </div>
+        
+        <div id="results-section">
+            <h2>Visualizations</h2>
+            <div id="plots">
+                {% for column, plot in plots.items %}
+                    <h3>{{ column }}</h3>
+                    <img src="data:image/png;base64,{{ plot }}" alt="Plot for {{ column }}">
+                {% endfor %}
+            </div>
+        </div>
+        
+        <a id="upload-link" href="{% url 'upload_file' %}">Upload another file</a>
+    </div>
+</body>
+</html>
