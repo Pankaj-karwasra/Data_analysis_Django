@@ -1,13 +1,15 @@
 **CSV File Analysis with Django**
-Overview
-This Django application allows users to upload CSV files for analysis. The application performs the following tasks:
+**Overview**
+This Django application allows users to upload CSV files for analysis. 
+The application performs the following tasks:
 
 Displays the first few rows of the dataset.
 Provides summary statistics.
 Shows missing values in the dataset.
 Generates histograms for numeric columns in the dataset.
 **
-Features**
+
+**Features****
 Upload CSV files using a web form.
 Visualize data distributions with histograms.
 View data preview, summary statistics, and missing values.
