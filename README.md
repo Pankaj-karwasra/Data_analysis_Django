@@ -22,5 +22,9 @@ templates/analysis/upload.html: Template for uploading CSV files.
 templates/analysis/results.html: Template for displaying the analysis results
 
 
+
+Run these two command:-
+                      python manage.py makemigrtaions
+                      python manage.py migrate
 Run Project:-
             python manage.py runserver
